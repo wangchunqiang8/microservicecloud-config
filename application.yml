@@ -1,0 +1,17 @@
+﻿# 必须保存为UTF-8格式
+spring:
+  profiles:
+    active:
+    - dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: micorservicecloud-config-blg-dev
+
+---
+spring:
+  profiles: test
+  application:
+    name: micorservicecloud-config-blg-test
