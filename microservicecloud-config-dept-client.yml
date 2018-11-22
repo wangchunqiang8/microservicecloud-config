@@ -7,15 +7,11 @@ spring:
 ---
 server:
   port: 8001
-spring:
-  profiles: dev
-  application:
-    name: mc-config-dept-client-8001
-
+ 
 spring:
   profiles: dev
    application:
-    name: microservicecloud-dept
+    name: mc-config-dept-client-8001
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver             # mysql驱动包
@@ -31,7 +27,7 @@ spring:
 
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml    # mybatis配置文件所在路径
-  type-aliases-package: com.blg.springboot.entities       # 所有Entity别名类所在包
+  type-aliases-package: com.blg.springboot.entities        # 所有Entity别名类所在包
   mapper-locations:
   - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
 
@@ -55,15 +51,11 @@ info:
 ---
 server:
   port: 8001
-spring:
-  profiles: test
-  application:
-    name: mc-config-dept-client-8001
 
 spring:
-  profiles: dev
+  profiles: test
    application:
-    name: microservicecloud-dept
+    name: mc-config-dept-client-8001
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver             # mysql驱动包
